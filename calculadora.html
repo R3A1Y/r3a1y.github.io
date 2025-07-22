@@ -1,11 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Costos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f9f9fb;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .subtext {
+      color: #555;
+    }
+    .option-group {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+    .resultado {
+      background-color: #eaf4ff;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .form-check-input[type="radio"] {
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <!-- Navbar heredado -->
+  <!-- Aquí va el mismo navbar del index.html -->
+   <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="http://www.w3.org/2000/svg">Divorcios Online</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="calculadora.html">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="citas.html">Citas</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item">
+            <a class="btn btn-primary ms-2" href="#consulta">Consulta Gratuita</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+
+  <div class="container py-5">
+    <h1 class="section-title text-center mb-3">Calcula el Costos de</h1>
+    <h1 class="section-title text-center mb-3" style="color: #2563EB;">Tu Divorcio</h1>
+    <p class="text-center subtext mb-5">Obtén una estimación precisa y personalizada del costo de tu proceso de divorcio basada en tu situación específica.</p>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="row">
+      <div class="col-md-7">
+        <form id="formCalculadora">
+
+          <div class="option-group">
+            <h5>1. ¿Qué tipo de divorcio necesitas?</h5>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="divorcio" value="30000" id="express">
+              <label class="form-check-label" for="express">
+                <b>Divorcio de mutuo acuerdo  - $499.99 </b>
+                <p>Ambos cónyuges están de acuerdo en separarse y establecen los términos juntos.</p>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="divorcio" value="39864" id="mutuo">
+              <label class="form-check-label" for="mutuo">
+                <b>Divorcio por causa determinada - $659.99 </b>
+                <p>Uno de los cónyuges demanda al otro por una causa legal.</p>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="divorcio" value="72480" id="contencioso">
+              <label class="form-check-label" for="contencioso">
+                <b>Divorcio al vapor - $1199.99 </b>
+                <p> para extranjeros o dominicanos que residen fuera del país.</p>
+              </label>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <h5>2. Factores adicionales</h5>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="15100" id="hijos">
+              <label class="form-check-label" for="hijos">
+                <b>¿Tienen hijos menores? (+$249.99)</b>
+              </label>
+            </div>
+            <br>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="6040" id="bienes">
+              <label class="form-check-label" for="bienes">
+                <b>¿Tienen bienes compartidos? (+$99.99) </b>
+                <p>+ 25% del total de los vienes compatidos</p>
+              </label>
+            </div>
+            <br>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="4530" id="mediacion">
+              <label class="form-check-label" for="mediacion">
+                <b>¿Requieren mediación familiar? (+$74.99)</b>
+              </label>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <h5>3. ¿Qué tan urgente es tu caso?</h5>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="urgencia" value="0" id="normal">
+              <label class="form-check-label" for="normal">
+                <b>Tiempo normal</b> 
+                <p>(Sin apuro)</p>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="urgencia" value="0.25" id="urgente">
+              <label class="form-check-label" for="urgente">
+                <b>Tramitación urgente</b> 
+                <p>(+25% costo)</p>
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary w-100" onclick="calcularCosto()">Calcular Costo Total</button>
+        </form>
+      </div>
+
+      <div class="col-md-5">
+        <div class="resultado">
+          <h4>Resumen</h4>
+          <ul id="resumenOpciones"></ul>
+          <hr>
+          <h5>Total: <span id="totalCosto">$0</span></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer heredado -->
+  <!-- Aquí va el mismo footer del index.html -->
+   <footer class="footer bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold mb-3">Divorcios Online</h5>
+        <p>Especialistas en divorcios rápidos, seguros y completamente en línea. Atención personalizada y asesoría legal confiable.</p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold mb-3">Enlaces Útiles</h5>
+        <ul class="list-unstyled">
+          <li><a href="#servicios" class="text-white text-decoration-none">Nuestros Servicios</a></li>
+          <li><a href="#proceso" class="text-white text-decoration-none">Proceso</a></li>
+          <li><a href="calculadora.html" class="text-white text-decoration-none">Calculadora</a></li>
+          <li><a href="citas.html" class="text-white text-decoration-none">Citas</a></li>
+          <li><a href="faq.html" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold mb-3">Contáctanos</h5>
+        <p><i class="bi bi-geo-alt-fill me-2"></i> República Dominicana</p>
+        <p><i class="bi bi-envelope-fill me-2"></i> contacto@divorciosonline.com</p>
+        <p><i class="bi bi-telephone-fill me-2"></i> +1 (809) 123-4567</p>
+        <div class="social-icons mt-3">
+          <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="bg-secondary" />
+    <div class="text-center small mt-3">
+      &copy; 2025 Divorcios Online. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+  <script>
+    function calcularCosto() {
+      let total = 0;
+      let resumen = [];
+
+      const tipoDivorcio = document.querySelector('input[name="divorcio"]:checked');
+      if (tipoDivorcio) {
+        total += parseFloat(tipoDivorcio.value);
+        resumen.push(tipoDivorcio.nextElementSibling.innerText);
+      }
+
+      document.querySelectorAll('input[type="checkbox"]:checked').forEach(el => {
+        total += parseFloat(el.value);
+        resumen.push(el.nextElementSibling.innerText);
+      });
+
+      const urgencia = document.querySelector('input[name="urgencia"]:checked');
+      if (urgencia) {
+        const porcentaje = parseFloat(urgencia.value);
+        resumen.push(urgencia.nextElementSibling.innerText);
+        total = total + (total * porcentaje);
+      }
+
+      const complejidad = document.querySelector('input[name="complejidad"]:checked');
+      if (complejidad) {
+        total += parseFloat(complejidad.value);
+        resumen.push(complejidad.nextElementSibling.innerText);
+      }
+
+      document.getElementById("totalCosto").innerText = `$${total.toFixed(2)}`;
+
+      const ul = document.getElementById("resumenOpciones");
+      ul.innerHTML = "";
+      resumen.forEach(opcion => {
+        const li = document.createElement("li");
+        li.innerText = opcion;
+        ul.appendChild(li);
+      });
+    }
+  </script>
+
 </body>
 </html>
