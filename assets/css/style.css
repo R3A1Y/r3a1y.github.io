@@ -1,0 +1,88 @@
+/* Importar fuente */
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  padding: 1rem;
+}
+
+.nav-link {
+  color: #333 !important;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+.hero {
+  background: url('../assets/img/hero.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  padding-top: 80px; /* para que no tape el navbar fijo */
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+#servicios h2 {
+  font-size: 2.2rem;
+}
+
+.card i {
+  font-size: 3rem;
+}
+
+#proceso h2 {
+  font-size: 2.2rem;
+}
+
+.proceso-card i {
+  font-size: 2.5rem;
+}
+
+.footer h5 {
+  font-size: 1.25rem;
+}
+
+.footer p, .footer a {
+  font-size: 0.95rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .social-icons a {
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #0d6efd;
+}
