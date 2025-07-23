@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formulario de Contacto - Citas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .step-indicator {
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #2563EB;
+        }
+
+        .resumen-cita {
+            background-color: #f1f5f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgb(37 99 235 / 0.3);
+        }
+
+        .resumen-cita h5 {
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #2563EB;
+        }
+
+        .resumen-item {
+            margin-bottom: 8px;
+        }
+
+        .importante {
+            font-weight: 600;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #7c3aed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">Divorcios Online</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculadora.html">Calculadora</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="citas.html">Citas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="#consulta">Consulta Gratuita</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br /><br /><br />
+
+    <div class="container py-4">
+        <div class="step-indicator">Paso 3 de 4: Confirma tus datos de contacto</div>
+
+        <div class="row g-4">
+            <!-- Formulario Izquierda -->
+            <div class="col-lg-6">
+                <form id="formCita">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre Completo *</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre completo" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" class="form-control" id="email" placeholder="tu@email.com" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono *</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="+1 (555) 123-4567" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tipo de Consulta *</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tipoConsulta" id="presencial"
+                                    value="Presencial" required />
+                                <label class="form-check-label" for="presencial">Presencial (En nuestras
+                                    oficinas)</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tipoConsulta" id="videollamada"
+                                    value="Videollamada" />
+                                <label class="form-check-label" for="videollamada">Videollamada (Consulta online por
+                                    Zoom)</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tipoConsulta" id="llamada"
+                                    value="Llamada Telefónica" />
+                                <label class="form-check-label" for="llamada">Llamada Telefónica (Consulta por
+                                    teléfono)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tipoDivorcio" class="form-label">Tipo de Divorcio (opcional)</label>
+                        <select class="form-select" id="tipoDivorcio">
+                            <option value="" selected>Selecciona una opción</option>
+                            <option value="Divorcio Express">Divorcio Express</option>
+                            <option value="Mutuo Acuerdo">Mutuo Acuerdo</option>
+                            <option value="Contencioso">Contencioso</option>
+                            <option value="Alimentos">Alimentos</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje (opcional)</label>
+                        <textarea class="form-control" id="mensaje" rows="3"
+                            placeholder="Cuéntanos brevemente tu situación..."></textarea>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a href="horas.html" class="btn btn-outline-secondary">Cambiar Hora</a>
+                        <button type="submit" class="btn btn-primary mt-3">Siguiente</button>
+                    </div>
+                </form>
+
+                <div id="alertSuccess" class="alert alert-success mt-4" style="display:none;">
+                    ¡Tu cita ha sido registrada correctamente! Nos pondremos en contacto contigo pronto.
+                </div>
+            </div>
+
+            <!-- Resumen Derecha -->
+            <div class="col-lg-6">
+                <div class="resumen-cita">
+                    <h5>Resumen de tu Cita</h5>
+                    <p>Revisa los detalles antes de confirmar</p>
+
+                    <div class="resumen-item"><strong>Detalles de la Consulta</strong></div>
+                    <div class="resumen-item" id="fechaResumen">Fecha: --</div>
+                    <div class="resumen-item" id="horaResumen">Hora: --</div>
+                    <div class="resumen-item" id="tipoConsultaResumen">Tipo de Consulta: --</div>
+                    <div class="resumen-item" id="mensajeResumen" style="margin-bottom: 15px;">&nbsp;</div>
+
+                    <div class="resumen-item"><strong>¿Qué Incluye?</strong></div>
+                    <ul>
+                        <li>Evaluación gratuita de tu caso</li>
+                        <li>Explicación de opciones legales</li>
+                        <li>Estimación de costos y tiempos</li>
+                        <li>Respuestas a todas tus dudas</li>
+                    </ul>
+
+                    <div class="importante">
+                        Importante: Recibirás un email de confirmación con todos los detalles y el enlace para la
+                        videollamada (si aplica). Si necesitas cambiar la cita, puedes hacerlo hasta 2 horas antes.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Divorcios Online</h5>
+                    <p>
+                        Especialistas en divorcios rápidos, seguros y completamente en línea.
+                        Atención personalizada y asesoría legal confiable.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Enlaces Útiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#servicios" class="text-white text-decoration-none">Nuestros Servicios</a></li>
+                        <li><a href="#proceso" class="text-white text-decoration-none">Proceso</a></li>
+                        <li><a href="calculadora.html" class="text-white text-decoration-none">Calculadora</a></li>
+                        <li><a href="citas.html" class="text-white text-decoration-none">Citas</a></li>
+                        <li><a href="faq.html" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Contáctanos</h5>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> República Dominicana</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i> contacto@divorciosonline.com</p>
+                    <p><i class="bi bi-telephone-fill me-2"></i> +1 (809) 123-4567</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-secondary" />
+            <div class="text-center small mt-3">&copy; 2025 Divorcios Online. Todos los derechos reservados.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Cargar datos previos desde localStorage
+        document.addEventListener("DOMContentLoaded", () => {
+            const fecha = localStorage.getItem("fechaSeleccionada") || "--";
+            const hora = localStorage.getItem("horaSeleccionada") || "--";
+            const tipoConsultaSeleccionado = localStorage.getItem("tipoConsulta") || "--";
+
+            document.getElementById("fechaResumen").textContent = "Fecha: " + fecha;
+            document.getElementById("horaResumen").textContent = "Hora: " + hora;
+            document.getElementById("tipoConsultaResumen").textContent = "Tipo de Consulta: " + tipoConsultaSeleccionado;
+
+            // Escuchar cambios en el tipo de consulta para actualizar resumen
+            const radiosConsulta = document.querySelectorAll('input[name="tipoConsulta"]');
+            radiosConsulta.forEach(radio => {
+                radio.addEventListener("change", (e) => {
+                    const valor = e.target.value;
+                    localStorage.setItem("tipoConsulta", valor);
+                    document.getElementById("tipoConsultaResumen").textContent = "Tipo de Consulta: " + valor;
+                });
+            });
+
+            // Actualizar mensaje resumen al escribir
+            const mensajeInput = document.getElementById("mensaje");
+            const mensajeResumen = document.getElementById("mensajeResumen");
+            mensajeInput.addEventListener("input", () => {
+                mensajeResumen.textContent = mensajeInput.value.trim() || "\u00A0"; // nbsp si vacío
+            });
+        });
+
+        
+
+        // Manejar envío del formulario
+        const formCita = document.getElementById("formCita");
+        
+        formCita.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            
+
+            
+        });
+
+        document.getElementById("formCita").addEventListener("submit", function (e) {
+
+            e.preventDefault(); // Evita que recargue la página
+
+            const correo = document.getElementById("email").value;
+
+
+            if (correo.trim() === "") {
+                alert("Por favor ingresa tu correo electrónico.");
+                return;
+            }
+
+            // Guarda el correo en localStorage para usarlo en el paso 4
+            localStorage.setItem("correoUsuario", correo);
+
+            // Redirecciona al paso 4
+            window.location.href = "citaCompleta.html";
+        });
+    </script>
+</body>
+
+</html>
