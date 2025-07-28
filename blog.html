@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,142 +8,261 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
   <style>
-    body { font-family: 'Roboto', sans-serif; background-color: #f8f9fa; }
-    .hero { background-color: #f1f5ff; padding: 4rem 0; text-align: center; }
-    .hero h1 { font-weight: 700; }
-    .hero span.text-primary { color: #2563EB !important; }
-    .badge-custom { background-color: #e0d3f5; color: #6b21a8; font-size: 0.75rem; }
-    .blog-card { background: #fff; border-radius: 0.5rem; box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075); padding: 1.5rem; margin-bottom: 1.5rem; }
-    .blog-footer { background: #0f172a; color: #fff; padding: 3rem 0; }
-    .blog-footer h5 { font-weight: bold; }
-    .blog-footer a { color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 0.5rem; }
-    .tag { font-size: 0.75rem; margin-right: 0.5rem; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .hero {
+      background-color: #f1f5ff;
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+    }
+
+    .hero span.text-primary {
+      color: #2563EB !important;
+    }
+
+    .badge-custom {
+      background-color: #e0d3f5;
+      color: #6b21a8;
+      font-size: 0.75rem;
+    }
+
+    .blog-card {
+      background: #fff;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .blog-footer {
+      background: #0f172a;
+      color: #fff;
+      padding: 3rem 0;
+    }
+
+    .blog-footer h5 {
+      font-weight: bold;
+    }
+
+    .blog-footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      margin-right: 0.5rem;
+    }
   </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-white border-bottom fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-primary" href="#">⚖️ DivorcioPro</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link" href="calculadora.html">Calculadora</a></li>
-        <li class="nav-item"><a class="nav-link" href="citas.html">Citas</a></li>
-        <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
-        <li class="nav-item"><a class="nav-link active text-primary" href="#">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-        <li class="nav-item"><a class="btn btn-primary ms-2" href="#consulta">Consulta Gratuita</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">Divorcios Online</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<!-- Hero -->
-<section class="hero mt-5 pt-5">
-  <div class="container">
-    <span class="badge badge-custom mb-3">Blog Legal</span>
-    <h1>Conocimiento Legal <span class="text-primary">A Tu Alcance</span></h1>
-    <p class="text-muted">Artículos especializados escritos por nuestros abogados expertos para ayudarte a entender mejor tus derechos y opciones legales.</p>
-  </div>
-</section>
-
-<!-- Artículo Destacado -->
-<section class="container py-5">
-  <h2 class="text-center fw-bold mb-3">Artículo Destacado</h2>
-  <p class="text-center text-muted mb-4">Lo más relevante de esta semana</p>
-  <div class="row justify-content-center">
-    <div class="col-md-10 d-flex bg-white rounded shadow-sm">
-      <div class="bg-primary text-white d-flex align-items-center justify-content-center px-4" style="min-width: 130px;">
-        <i class="bi bi-file-earmark-text fs-1"></i>
-      </div>
-      <div class="p-4">
-        <span class="badge bg-light text-dark me-2 mb-1">Consejos Legales</span>
-        <span class="badge bg-dark-subtle text-dark mb-1">Destacado</span>
-        <h5 class="fw-bold mt-2">Guía Completa: ¿Cuándo es el Momento Adecuado para Divorciarse?</h5>
-        <p class="text-muted mb-0">Factores emocionales, legales y económicos que debes considerar antes de tomar la decisión de divorciarte.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Lista de Artículos -->
-<section class="container pb-5">
-  <div class="blog-card">
-    <div class="d-flex">
-      <div class="me-4 text-primary fs-3"><i class="bi bi-file-earmark-text"></i></div>
-      <div>
-        <span class="badge bg-light text-dark mb-1">Mediación</span>
-        <h5 class="fw-bold">Mediación Familiar: Una Alternativa Pacífica al Divorcio Contencioso</h5>
-        <p class="text-muted">Cómo la mediación puede ayudar a las parejas a llegar a acuerdos justos sin la necesidad de un proceso judicial adversarial.</p>
-        <p class="small text-muted mb-1">👤 Dr. Miguel Torres | 📅 20 Febrero 2024 | ⏱️ 7 min</p>
-        <div>
-          <span class="badge bg-secondary-subtle text-dark tag">Mediación</span>
-          <span class="badge bg-secondary-subtle text-dark tag">Acuerdo</span>
-          <span class="badge bg-secondary-subtle text-dark tag">Paz</span>
-          <a href="#" class="btn btn-outline-dark btn-sm float-end">Leer más <i class="bi bi-arrow-right"></i></a>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculadora.html">Calculadora</a></li>
+                    <li class="nav-item"><a class="nav-link" href="citas.html">Citas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="index.html#consulta">Consulta Gratuita</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+
+  <!-- Hero -->
+  <section class="hero mt-5 pt-5">
+    <div class="container">
+      <span class="badge badge-custom mb-3">Blog Legal</span>
+      <h1>Conocimiento Legal <span class="text-primary">A Tu Alcance</span></h1>
+      <p class="text-muted">Artículos especializados escritos por nuestros abogados expertos para ayudarte a entender
+        mejor tus derechos y opciones legales.</p>
+    </div>
+  </section>
+
+  <!-- blog.html - Sección de Artículo Destacado y Últimos Artículos -->
+  <section class="container py-5">
+    <!-- Artículo Destacado -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6">
+        <img src="https://www.enfant-en-voyage.com/wp-content/uploads/2023/05/tourisme-belgique-famille-600x350.jpg"
+          class="img-fluid rounded shadow-sm" alt="Artículo Destacado">
+      </div>
+      <div class="col-lg-6">
+        <h5 class="text-primary">Artículo Destacado</h5>
+        <h2 class="fw-bold mb-3">5 Claves para un Divorcio sin Estrés</h2>
+        <p class="text-muted">Publicado el 25 de julio de 2025</p>
+        <p>
+          Descubre las estrategias legales y emocionales para llevar tu proceso de divorcio con la mayor tranquilidad
+          posible. Nuestros expertos comparten consejos clave que han ayudado a cientos de familias.
+        </p>
+        <a href="#" class="btn btn-outline-primary mt-2">Leer más</a>
       </div>
     </div>
-  </div>
 
-  <div class="blog-card">
-    <div class="d-flex">
-      <div class="me-4 text-primary fs-3"><i class="bi bi-file-earmark-text"></i></div>
-      <div>
-        <span class="badge bg-light text-dark mb-1">Documentos</span>
-        <h5 class="fw-bold">Documentación Necesaria para Iniciar un Proceso de Divorcio</h5>
-        <p class="text-muted">Lista completa y checklist de todos los documentos que necesitarás para iniciar tu proceso de divorcio.</p>
-        <p class="small text-muted mb-1">👤 Lic. Roberto Silva | 📅 15 Febrero 2024 | ⏱️ 4 min</p>
-        <div>
-          <span class="badge bg-secondary-subtle text-dark tag">Documentos</span>
-          <span class="badge bg-secondary-subtle text-dark tag">Requisitos</span>
-          <span class="badge bg-secondary-subtle text-dark tag">Proceso</span>
-          <a href="#" class="btn btn-outline-dark btn-sm float-end">Leer más <i class="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA Final -->
-<section class="blog-footer text-center">
-  <div class="container">
-    <h2 class="mb-3">¿Necesitas Asesoría Legal Personalizada?</h2>
-    <p class="mb-4">Nuestros artículos son informativos, pero cada caso es único. Habla con nuestros abogados especializados para obtener consejos específicos para tu situación.</p>
-    <a class="btn btn-primary px-4 me-2" href="#consulta">Consulta Gratuita</a>
-    <input class="form-control d-inline-block w-auto mt-3 mt-lg-0" style="max-width: 300px;" placeholder="Tu correo electrónico" />
-  </div>
-
-  <div class="container mt-5 text-start">
+    <!-- Últimos Artículos y Categorías -->
     <div class="row">
-      <div class="col-md-4">
-        <h5>DivorcioPro</h5>
-        <p>Servicios legales especializados en divorcios online. Rápido, seguro y confidencial.</p>
+      <!-- Últimos Artículos -->
+      <div class="col-lg-8">
+        <h4 class="fw-bold mb-4">Últimos Artículos</h4>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <img src="https://i.pinimg.com/474x/d7/47/f7/d747f70ce52b0df12c1542b280fa8d76.jpg" class="card-img-top"
+                alt="Artículo 1">
+              <div class="card-body">
+                <p class="text-muted small mb-1">Publicado el 20 de julio de 2025</p>
+                <h5 class="card-title">¿Cuánto Cuesta un Divorcio en RD?</h5>
+                <p class="card-text">Analizamos los precios y costos ocultos que podrías enfrentar en un proceso de
+                  divorcio.</p>
+                <a href="#" class="btn btn-sm btn-primary">Leer más</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <img src="https://i.pinimg.com/474x/d7/47/f7/d747f70ce52b0df12c1542b280fa8d76.jpg" class="card-img-top"
+                alt="Artículo 2">
+              <div class="card-body">
+                <p class="text-muted small mb-1">Publicado el 18 de julio de 2025</p>
+                <h5 class="card-title">Tipos de Custodia en RD</h5>
+                <p class="card-text">Conoce las diferentes modalidades de custodia y qué implica cada una.</p>
+                <a href="#" class="btn btn-sm btn-primary">Leer más</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <img src="https://i.pinimg.com/474x/d7/47/f7/d747f70ce52b0df12c1542b280fa8d76.jpg" class="card-img-top"
+                alt="Artículo 3">
+              <div class="card-body">
+                <p class="text-muted small mb-1">Publicado el 15 de julio de 2025</p>
+                <h5 class="card-title">Divorcio y Bienes Compartidos</h5>
+                <p class="card-text">Aprende cómo se reparten los bienes tras la separación de forma justa y legal.</p>
+                <a href="#" class="btn btn-sm btn-primary">Leer más</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <img src="https://i.pinimg.com/474x/d7/47/f7/d747f70ce52b0df12c1542b280fa8d76.jpg" class="card-img-top"
+                alt="Artículo 4">
+              <div class="card-body">
+                <p class="text-muted small mb-1">Publicado el 10 de julio de 2025</p>
+                <h5 class="card-title">Errores Comunes en un Divorcio</h5>
+                <p class="card-text">Evita estos errores frecuentes que pueden retrasar o complicar tu proceso legal.
+                </p>
+                <a href="#" class="btn btn-sm btn-primary">Leer más</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h5>Servicios</h5>
-        <a href="#">Divorcio Mutuo Acuerdo</a>
-        <a href="#">Divorcio Contencioso</a>
-        <a href="#">Divorcio Express</a>
-        <a href="#">Custodia de Menores</a>
-      </div>
-      <div class="col-md-4">
-        <h5>Legal</h5>
-        <a href="#">Términos y Condiciones</a>
-        <a href="#">Política de Privacidad</a>
-        <a href="#">Aviso Legal</a>
-        <a href="#">Protección de Datos</a>
+
+      <!-- Categorías -->
+      <div class="col-lg-4">
+        <h4 class="fw-bold mb-4">Categorías</h4>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Consejos Legales
+            <span class="badge bg-primary rounded-pill">12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Familia
+            <span class="badge bg-primary rounded-pill">8</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Finanzas
+            <span class="badge bg-primary rounded-pill">6</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Tecnología Legal
+            <span class="badge bg-primary rounded-pill">4</span>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="text-center mt-4 small text-secondary">© 2024 DivorcioPro. Todos los derechos reservados.</div>
-  </div>
-</section>
+  </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- CTA Final -->
+  <section class="blog-footer text-center">
+    <div class="container">
+      <h2 class="mb-3">¿Necesitas Asesoría Legal Personalizada?</h2>
+      <p class="mb-4">Nuestros artículos son informativos, pero cada caso es único. Habla con nuestros abogados
+        especializados para obtener consejos específicos para tu situación.</p>
+      <a class="btn btn-primary px-4 me-2" href="#consulta">Consulta Gratuita</a>
+
+    </div>
+
+
+  </section>
+
+  <footer class="footer bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">Divorcios Online</h5>
+          <p>Especialistas en divorcios rápidos, seguros y completamente en línea. Atención personalizada y
+            asesoría legal confiable.</p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">Enlaces Útiles</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html#servicios" class="text-white text-decoration-none">Nuestros Servicios</a></li>
+            <li><a href="index.html#proceso" class="text-white text-decoration-none">Proceso</a></li>
+            <li><a href="calculadora.html" class="text-white text-decoration-none">Calculadora</a></li>
+            <li><a href="citas.html" class="text-white text-decoration-none">Citas</a></li>
+            <li><a href="faq.html" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">Contáctanos</h5>
+          <p><i class="bi bi-geo-alt-fill me-2"></i> República Dominicana</p>
+          <p><i class="bi bi-envelope-fill me-2"></i> contacto@divorciosonline.com</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> +1 (809) 123-4567</p>
+          <div class="social-icons mt-3">
+            <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="bg-secondary" />
+      <div class="text-center small mt-3">
+        &copy; 2025 Divorcios Online. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

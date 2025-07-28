@@ -2,439 +2,482 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Preguntas Frecuentes - Divorcios Online</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preguntas Frecuentes - Divorcios Online</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
-  <style>
-    body {
-      background-color: #f8f9fa;
-      font-family: 'Roboto', sans-serif;
-    }
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Roboto', sans-serif;
+        }
 
-    /* Hero */
-    .hero {
-      background-color: #2563EB;
-      color: white;
-      padding: 5rem 1rem 3rem;
-      text-align: center;
-    }
+        /* Hero */
+        .hero {
+            background-color: #f1f5ff;
+            padding: 4rem 0;
+            text-align: center;
+        }
 
-    .hero h1 {
-      font-weight: 900;
-      font-size: 3rem;
-      line-height: 1.2;
-    }
+        .hero h1 {
+            font-weight: 700;
+        }
 
-    .hero p.subtitle {
-      font-size: 1.25rem;
-      margin-top: 1rem;
-      font-weight: 500;
-      max-width: 650px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+        .hero span.text-primary {
+            color: #2563EB !important;
+        }
 
-    /* Sección preguntas */
-    .faq-section {
-      max-width: 900px;
-      margin: 3rem auto 5rem;
-      padding: 0 1rem;
-    }
+        .badge-custom {
+            background-color: #e0d3f5;
+            color: #6b21a8;
+            font-size: 0.75rem;
+        }
 
-    .faq-category {
-      margin-bottom: 2rem;
-    }
+        /* Sección preguntas */
+        .faq-section {
+            max-width: 900px;
+            margin: 3rem auto 5rem;
+            padding: 0 1rem;
+        }
 
-    .faq-category h3 {
-      color: #2563EB;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
+        .faq-category {
+            margin-bottom: 2rem;
+        }
 
-    /* Bloques destacados */
-    .highlights {
-      background-color: white;
-      max-width: 900px;
-      margin: 0 auto 4rem;
-      padding: 2rem 1rem;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgb(37 99 235 / 0.15);
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
+        .faq-category h3 {
+            color: #2563EB;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
 
-    .highlight-item {
-      text-align: center;
-      flex: 1 1 250px;
-    }
+        /* Bloques destacados */
+        .highlights {
+            background-color: white;
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            padding: 2rem 1rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgb(37 99 235 / 0.15);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
 
-    .highlight-item i {
-      font-size: 2.5rem;
-      color: #2563EB;
-      margin-bottom: 0.5rem;
-    }
+        .highlight-item {
+            text-align: center;
+            flex: 1 1 250px;
+        }
 
-    .highlight-item p {
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin: 0;
-      color: #444;
-    }
+        .highlight-item i {
+            font-size: 2.5rem;
+            color: #2563EB;
+            margin-bottom: 0.5rem;
+        }
 
-    /* Botones al pie */
-    .faq-footer-buttons {
-      text-align: center;
-      margin-bottom: 4rem;
-      gap: 1rem;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+        .highlight-item p {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 0;
+            color: #444;
+        }
 
-    .faq-footer-buttons a {
-      min-width: 180px;
-    }
+        /* Botones al pie */
+        .faq-footer-buttons {
+            text-align: center;
+            margin-bottom: 4rem;
+            gap: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-    /* Buscador */
-    #searchFaq {
-      max-width: 400px;
-      margin: 0 auto 3rem;
-    }
-  </style>
+        .faq-footer-buttons a {
+            min-width: 180px;
+        }
+
+        /* Buscador */
+        #searchFaq {
+            max-width: 400px;
+            margin: 0 auto 3rem;
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="index.html">Divorcios Online</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="calculadora.html">Calculadora</a></li>
-          <li class="nav-item"><a class="nav-link" href="citas.html">Citas</a></li>
-          <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
-          <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
-          <li class="nav-item">
-            <a class="btn btn-primary ms-2" href="#consulta">Consulta Gratuita</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Preguntas Frecuentes</h1>
-    <p class="subtitle">Resolvemos Todas Tus Dudas</p>
-  </section>
-
-  <!-- Buscador -->
-  <div id="searchFaq" class="input-group mb-4">
-    <span class="input-group-text"><i class="bi bi-search"></i></span>
-    <input type="text" id="inputBuscar" class="form-control" placeholder="Busca tu pregunta aquí..." aria-label="Buscar FAQ" />
-  </div>
-
-  <!-- Preguntas frecuentes -->
-  <main class="faq-section" id="faqSection">
-
-    <!-- Introducción -->
-    <p class="text-center mb-5 fs-5 fw-semibold text-secondary">Encuentra respuestas a las preguntas más comunes sobre divorcios online y nuestros servicios legales.</p>
-
-    <!-- Categoría: Proceso de Divorcio -->
-    <section class="faq-category">
-      <h3>Proceso de Divorcio</h3>
-      <div class="accordion" id="accordionProceso">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="proceso1-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proceso1" aria-expanded="false" aria-controls="proceso1">
-              ¿Cuánto tiempo toma un divorcio online?
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">Divorcios Online</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          </h2>
-          <div id="proceso1" class="accordion-collapse collapse" aria-labelledby="proceso1-heading" data-bs-parent="#accordionProceso">
-            <div class="accordion-body">
-              El tiempo varía según el tipo de divorcio. Un divorcio express puede completarse en 15 días, mientras que uno de mutuo acuerdo toma aproximadamente 30 días, y uno contencioso puede extenderse de 60 a 90 días.
-            </div>
-          </div>
-        </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="proceso2-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proceso2" aria-expanded="false" aria-controls="proceso2">
-              ¿Qué documentos necesito para iniciar el proceso?
-            </button>
-          </h2>
-          <div id="proceso2" class="accordion-collapse collapse" aria-labelledby="proceso2-heading" data-bs-parent="#accordionProceso">
-            <div class="accordion-body">
-              Necesitas: certificado de matrimonio, DNI de ambos cónyuges, certificados de nacimiento de los hijos (si los hay), y documentos que acrediten bienes y deudas compartidas.
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculadora.html">Calculadora</a></li>
+                    <li class="nav-item"><a class="nav-link" href="citas.html">Citas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="index.html#consulta">Consulta Gratuita</a>
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
+    </nav>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="proceso3-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proceso3" aria-expanded="false" aria-controls="proceso3">
-              ¿Puedo iniciar el divorcio si mi pareja no está de acuerdo?
-            </button>
-          </h2>
-          <div id="proceso3" class="accordion-collapse collapse" aria-labelledby="proceso3-heading" data-bs-parent="#accordionProceso">
-            <div class="accordion-body">
-              Sí, puedes iniciar un divorcio contencioso. En este caso, nuestros abogados te representarán legalmente para defender tus derechos e intereses.
-            </div>
-          </div>
+    <!-- Hero -->
+    <section class="hero mt-5 pt-5">
+        <div class="container">
+            <span class="badge badge-custom mb-3">Preguntas Frecuentes</span>
+            <h1>Resolvemos Todas Tus Dudas</h1>
+            <p class="text-muted">Encuentra respuestas a las preguntas más comunes sobre divorcios online y <br>
+                nuestros servicios legales.</p>
         </div>
-      </div>
     </section>
 
-    <!-- Categoría: Costos y Pagos -->
-    <section class="faq-category">
-      <h3>Costos y Pagos</h3>
-      <div class="accordion" id="accordionCostos">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="costos1-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#costos1" aria-expanded="false" aria-controls="costos1">
-              ¿Cuáles son los costos totales del divorcio?
-            </button>
-          </h2>
-          <div id="costos1" class="accordion-collapse collapse" aria-labelledby="costos1-heading" data-bs-parent="#accordionCostos">
-            <div class="accordion-body">
-              Nuestros precios incluyen todos los honorarios legales. Divorcio Express: $199, Mutuo Acuerdo: $299, Contencioso: $599. No hay costos ocultos.
-            </div>
-          </div>
-        </div>
+    <!-- Buscador -->
+    <div id="searchFaq" class="input-group mb-4">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <input type="text" id="inputBuscar" class="form-control" placeholder="Busca tu pregunta aquí..."
+            aria-label="Buscar FAQ" />
+    </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="costos2-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#costos2" aria-expanded="false" aria-controls="costos2">
-              ¿Puedo pagar en cuotas?
-            </button>
-          </h2>
-          <div id="costos2" class="accordion-collapse collapse" aria-labelledby="costos2-heading" data-bs-parent="#accordionCostos">
-            <div class="accordion-body">
-              Sí, ofrecemos planes de pago flexibles. Puedes pagar en hasta 3 cuotas sin interés para facilitar el proceso.
-            </div>
-          </div>
-        </div>
+    <!-- Preguntas frecuentes -->
+    <main class="faq-section" id="faqSection">
 
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="costos3-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#costos3" aria-expanded="false" aria-controls="costos3">
-              ¿Qué incluye el precio del servicio?
-            </button>
-          </h2>
-          <div id="costos3" class="accordion-collapse collapse" aria-labelledby="costos3-heading" data-bs-parent="#accordionCostos">
-            <div class="accordion-body">
-              El precio incluye: asesoría legal completa, preparación de documentos, representación ante juzgados, seguimiento del caso y entrega de la sentencia final.
+        <!-- Introducción -->
+        <p class="text-center mb-5 fs-5 fw-semibold text-secondary">Encuentra respuestas a las preguntas más comunes
+            sobre divorcios online y nuestros servicios legales.</p>
+
+        <!-- Categoría: Proceso de Divorcio -->
+        <section class="faq-category">
+            <h3>Proceso de Divorcio</h3>
+            <div class="accordion" id="accordionProceso">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="proceso1-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#proceso1" aria-expanded="false" aria-controls="proceso1">
+                            ¿Cuánto tiempo toma un divorcio online?
+                        </button>
+                    </h2>
+                    <div id="proceso1" class="accordion-collapse collapse" aria-labelledby="proceso1-heading"
+                        data-bs-parent="#accordionProceso">
+                        <div class="accordion-body">
+                            El tiempo varía según el tipo de divorcio. Un divorcio express puede completarse en 15 días,
+                            mientras que uno de mutuo acuerdo toma aproximadamente 30 días, y uno contencioso puede
+                            extenderse de 60 a 90 días.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="proceso2-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#proceso2" aria-expanded="false" aria-controls="proceso2">
+                            ¿Qué documentos necesito para iniciar el proceso?
+                        </button>
+                    </h2>
+                    <div id="proceso2" class="accordion-collapse collapse" aria-labelledby="proceso2-heading"
+                        data-bs-parent="#accordionProceso">
+                        <div class="accordion-body">
+                            Necesitas: certificado de matrimonio, DNI de ambos cónyuges, certificados de nacimiento de
+                            los hijos (si los hay), y documentos que acrediten bienes y deudas compartidas.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="proceso3-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#proceso3" aria-expanded="false" aria-controls="proceso3">
+                            ¿Puedo iniciar el divorcio si mi pareja no está de acuerdo?
+                        </button>
+                    </h2>
+                    <div id="proceso3" class="accordion-collapse collapse" aria-labelledby="proceso3-heading"
+                        data-bs-parent="#accordionProceso">
+                        <div class="accordion-body">
+                            Sí, puedes iniciar un divorcio contencioso. En este caso, nuestros abogados te representarán
+                            legalmente para defender tus derechos e intereses.
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
+
+        <!-- Categoría: Costos y Pagos -->
+        <section class="faq-category">
+            <h3>Costos y Pagos</h3>
+            <div class="accordion" id="accordionCostos">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="costos1-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#costos1" aria-expanded="false" aria-controls="costos1">
+                            ¿Cuáles son los costos totales del divorcio?
+                        </button>
+                    </h2>
+                    <div id="costos1" class="accordion-collapse collapse" aria-labelledby="costos1-heading"
+                        data-bs-parent="#accordionCostos">
+                        <div class="accordion-body">
+                            Nuestros precios incluyen todos los honorarios legales. Divorcio Express: $199, Mutuo
+                            Acuerdo: $299, Contencioso: $599. No hay costos ocultos.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="costos2-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#costos2" aria-expanded="false" aria-controls="costos2">
+                            ¿Puedo pagar en cuotas?
+                        </button>
+                    </h2>
+                    <div id="costos2" class="accordion-collapse collapse" aria-labelledby="costos2-heading"
+                        data-bs-parent="#accordionCostos">
+                        <div class="accordion-body">
+                            Sí, ofrecemos planes de pago flexibles. Puedes pagar en hasta 3 cuotas sin interés para
+                            facilitar el proceso.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="costos3-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#costos3" aria-expanded="false" aria-controls="costos3">
+                            ¿Qué incluye el precio del servicio?
+                        </button>
+                    </h2>
+                    <div id="costos3" class="accordion-collapse collapse" aria-labelledby="costos3-heading"
+                        data-bs-parent="#accordionCostos">
+                        <div class="accordion-body">
+                            El precio incluye: asesoría legal completa, preparación de documentos, representación ante
+                            juzgados, seguimiento del caso y entrega de la sentencia final.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categoría: Custodia y Menores -->
+        <section class="faq-category">
+            <h3>Custodia y Menores</h3>
+            <div class="accordion" id="accordionCustodia">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="custodia1-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#custodia1" aria-expanded="false" aria-controls="custodia1">
+                            ¿Cómo se determina la custodia de los hijos?
+                        </button>
+                    </h2>
+                    <div id="custodia1" class="accordion-collapse collapse" aria-labelledby="custodia1-heading"
+                        data-bs-parent="#accordionCustodia">
+                        <div class="accordion-body">
+                            La custodia se determina priorizando el bienestar del menor. Se considera la estabilidad
+                            económica, emocional, y la relación con cada progenitor. Puede ser compartida o exclusiva.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="custodia2-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#custodia2" aria-expanded="false" aria-controls="custodia2">
+                            ¿Puedo cambiar el régimen de visitas después del divorcio?
+                        </button>
+                    </h2>
+                    <div id="custodia2" class="accordion-collapse collapse" aria-labelledby="custodia2-heading"
+                        data-bs-parent="#accordionCustodia">
+                        <div class="accordion-body">
+                            Sí, el régimen de visitas puede modificarse si hay cambios significativos en las
+                            circunstancias. Nuestros abogados pueden ayudarte con este proceso.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="custodia3-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#custodia3" aria-expanded="false" aria-controls="custodia3">
+                            ¿Qué pasa con la pensión alimenticia?
+                        </button>
+                    </h2>
+                    <div id="custodia3" class="accordion-collapse collapse" aria-labelledby="custodia3-heading"
+                        data-bs-parent="#accordionCustodia">
+                        <div class="accordion-body">
+                            La pensión alimenticia se calcula basándose en los ingresos del obligado y las necesidades
+                            del menor. Es revisable periódicamente según cambios en la situación económica.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categoría: Bienes y Patrimonio -->
+        <section class="faq-category">
+            <h3>Bienes y Patrimonio</h3>
+            <div class="accordion" id="accordionBienes">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="bienes1-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#bienes1" aria-expanded="false" aria-controls="bienes1">
+                            ¿Cómo se dividen los bienes matrimoniales?
+                        </button>
+                    </h2>
+                    <div id="bienes1" class="accordion-collapse collapse" aria-labelledby="bienes1-heading"
+                        data-bs-parent="#accordionBienes">
+                        <div class="accordion-body">
+                            Los bienes adquiridos durante el matrimonio se dividen por igual, salvo acuerdo contrario.
+                            Los bienes propios de cada cónyuge permanecen con su titular original.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="bienes2-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#bienes2" aria-expanded="false" aria-controls="bienes2">
+                            ¿Qué pasa con las deudas matrimoniales?
+                        </button>
+                    </h2>
+                    <div id="bienes2" class="accordion-collapse collapse" aria-labelledby="bienes2-heading"
+                        data-bs-parent="#accordionBienes">
+                        <div class="accordion-body">
+                            Las deudas contraídas durante el matrimonio son responsabilidad de ambos cónyuges y se
+                            dividen equitativamente, considerando la capacidad de pago de cada uno.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="bienes3-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#bienes3" aria-expanded="false" aria-controls="bienes3">
+                            ¿Puedo quedarme con la casa familiar?
+                        </button>
+                    </h2>
+                    <div id="bienes3" class="accordion-collapse collapse" aria-labelledby="bienes3-heading"
+                        data-bs-parent="#accordionBienes">
+                        <div class="accordion-body">
+                            La vivienda familiar puede asignarse considerando varios factores: custodia de hijos
+                            menores, capacidad económica, y acuerdos entre las partes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bloques destacados -->
+    <section class="highlights">
+        <div class="highlight-item">
+            <i class="bi bi-clock-history"></i>
+            <p><strong>Respuesta en 24h</strong><br />Contestamos todas tus dudas en menos de un día hábil</p>
         </div>
-      </div>
+        <div class="highlight-item">
+            <i class="bi bi-shield-lock"></i>
+            <p><strong>100% Confidencial</strong><br />Tu información está protegida bajo secreto profesional</p>
+        </div>
+        <div class="highlight-item">
+            <i class="bi bi-person-badge"></i>
+            <p><strong>Abogados Expertos</strong><br />Equipo especializado con más de 10 años de experiencia</p>
+        </div>
     </section>
 
-    <!-- Categoría: Custodia y Menores -->
-    <section class="faq-category">
-      <h3>Custodia y Menores</h3>
-      <div class="accordion" id="accordionCustodia">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="custodia1-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#custodia1" aria-expanded="false" aria-controls="custodia1">
-              ¿Cómo se determina la custodia de los hijos?
-            </button>
-          </h2>
-          <div id="custodia1" class="accordion-collapse collapse" aria-labelledby="custodia1-heading" data-bs-parent="#accordionCustodia">
-            <div class="accordion-body">
-              La custodia se determina priorizando el bienestar del menor. Se considera la estabilidad económica, emocional, y la relación con cada progenitor. Puede ser compartida o exclusiva.
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="custodia2-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#custodia2" aria-expanded="false" aria-controls="custodia2">
-              ¿Puedo cambiar el régimen de visitas después del divorcio?
-            </button>
-          </h2>
-          <div id="custodia2" class="accordion-collapse collapse" aria-labelledby="custodia2-heading" data-bs-parent="#accordionCustodia">
-            <div class="accordion-body">
-              Sí, el régimen de visitas puede modificarse si hay cambios significativos en las circunstancias. Nuestros abogados pueden ayudarte con este proceso.
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="custodia3-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#custodia3" aria-expanded="false" aria-controls="custodia3">
-              ¿Qué pasa con la pensión alimenticia?
-            </button>
-          </h2>
-          <div id="custodia3" class="accordion-collapse collapse" aria-labelledby="custodia3-heading" data-bs-parent="#accordionCustodia">
-            <div class="accordion-body">
-              La pensión alimenticia se calcula basándose en los ingresos del obligado y las necesidades del menor. Es revisable periódicamente según cambios en la situación económica.
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- Botones al pie -->
+    <section class="faq-footer-buttons">
+        <a href="index.html#consulta" class="btn btn-primary">Consulta Gratuita</a>
+        <a href="index.html" class="btn btn-outline-primary">Volver al Inicio</a>
     </section>
 
-    <!-- Categoría: Bienes y Patrimonio -->
-    <section class="faq-category">
-      <h3>Bienes y Patrimonio</h3>
-      <div class="accordion" id="accordionBienes">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="bienes1-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bienes1" aria-expanded="false" aria-controls="bienes1">
-              ¿Cómo se dividen los bienes matrimoniales?
-            </button>
-          </h2>
-          <div id="bienes1" class="accordion-collapse collapse" aria-labelledby="bienes1-heading" data-bs-parent="#accordionBienes">
-            <div class="accordion-body">
-              Los bienes adquiridos durante el matrimonio se dividen por igual, salvo acuerdo contrario. Los bienes propios de cada cónyuge permanecen con su titular original.
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Divorcios Online</h5>
+                    <p>
+                        Especialistas en divorcios rápidos, seguros y completamente en línea.
+                        Atención personalizada y asesoría legal confiable.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Enlaces Útiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#servicios" class="text-white text-decoration-none">Nuestros Servicios</a></li>
+                        <li><a href="index.html#proceso" class="text-white text-decoration-none">Proceso</a></li>
+                        <li><a href="calculadora.html" class="text-white text-decoration-none">Calculadora</a></li>
+                        <li><a href="citas.html" class="text-white text-decoration-none">Citas</a></li>
+                        <li><a href="faq.html" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Contáctanos</h5>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> República Dominicana</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i> contacto@divorciosonline.com</p>
+                    <p><i class="bi bi-telephone-fill me-2"></i> +1 (809) 123-4567</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
             </div>
-          </div>
+            <hr class="bg-secondary" />
+            <div class="text-center small mt-3">&copy; 2025 Divorcios Online. Todos los derechos reservados.</div>
         </div>
+    </footer>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="bienes2-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bienes2" aria-expanded="false" aria-controls="bienes2">
-              ¿Qué pasa con las deudas matrimoniales?
-            </button>
-          </h2>
-          <div id="bienes2" class="accordion-collapse collapse" aria-labelledby="bienes2-heading" data-bs-parent="#accordionBienes">
-            <div class="accordion-body">
-              Las deudas contraídas durante el matrimonio son responsabilidad de ambos cónyuges y se dividen equitativamente, considerando la capacidad de pago de cada uno.
-            </div>
-          </div>
-        </div>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="bienes3-heading">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bienes3" aria-expanded="false" aria-controls="bienes3">
-              ¿Puedo quedarme con la casa familiar?
-            </button>
-          </h2>
-          <div id="bienes3" class="accordion-collapse collapse" aria-labelledby="bienes3-heading" data-bs-parent="#accordionBienes">
-            <div class="accordion-body">
-              La vivienda familiar puede asignarse considerando varios factores: custodia de hijos menores, capacidad económica, y acuerdos entre las partes.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+    <!-- Script para buscador FAQ -->
+    <script>
+        const inputBuscar = document.getElementById('inputBuscar');
+        const faqSection = document.getElementById('faqSection');
 
-  <!-- Bloques destacados -->
-  <section class="highlights">
-    <div class="highlight-item">
-      <i class="bi bi-clock-history"></i>
-      <p><strong>Respuesta en 24h</strong><br />Contestamos todas tus dudas en menos de un día hábil</p>
-    </div>
-    <div class="highlight-item">
-      <i class="bi bi-shield-lock"></i>
-      <p><strong>100% Confidencial</strong><br />Tu información está protegida bajo secreto profesional</p>
-    </div>
-    <div class="highlight-item">
-      <i class="bi bi-person-badge"></i>
-      <p><strong>Abogados Expertos</strong><br />Equipo especializado con más de 10 años de experiencia</p>
-    </div>
-  </section>
+        inputBuscar.addEventListener('input', () => {
+            const filtro = inputBuscar.value.toLowerCase();
 
-  <!-- Botones al pie -->
-  <section class="faq-footer-buttons">
-    <a href="index.html#consulta" class="btn btn-primary">Consulta Gratuita</a>
-    <a href="index.html" class="btn btn-outline-primary">Volver al Inicio</a>
-  </section>
+            // Obtener todas las preguntas y categorías
+            const categorias = faqSection.querySelectorAll('.faq-category');
 
-  <!-- Footer -->
-  <footer class="footer bg-dark text-white pt-5 pb-3 mt-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <h5 class="fw-bold mb-3">Divorcios Online</h5>
-          <p>
-            Especialistas en divorcios rápidos, seguros y completamente en línea.
-            Atención personalizada y asesoría legal confiable.
-          </p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <h5 class="fw-bold mb-3">Enlaces Útiles</h5>
-          <ul class="list-unstyled">
-            <li><a href="#servicios" class="text-white text-decoration-none">Nuestros Servicios</a></li>
-            <li><a href="#proceso" class="text-white text-decoration-none">Proceso</a></li>
-            <li><a href="calculadora.html" class="text-white text-decoration-none">Calculadora</a></li>
-            <li><a href="citas.html" class="text-white text-decoration-none">Citas</a></li>
-            <li><a href="faq.html" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 mb-4">
-          <h5 class="fw-bold mb-3">Contáctanos</h5>
-          <p><i class="bi bi-geo-alt-fill me-2"></i> República Dominicana</p>
-          <p><i class="bi bi-envelope-fill me-2"></i> contacto@divorciosonline.com</p>
-          <p><i class="bi bi-telephone-fill me-2"></i> +1 (809) 123-4567</p>
-          <div class="social-icons mt-3">
-            <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
-          </div>
-        </div>
-      </div>
-      <hr class="bg-secondary" />
-      <div class="text-center small mt-3">&copy; 2025 Divorcios Online. Todos los derechos reservados.</div>
-    </div>
-  </footer>
+            categorias.forEach(categoria => {
+                let categoriaVisible = false;
 
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+                const items = categoria.querySelectorAll('.accordion-item');
 
-  <!-- Script para buscador FAQ -->
-  <script>
-    const inputBuscar = document.getElementById('inputBuscar');
-    const faqSection = document.getElementById('faqSection');
+                items.forEach(item => {
+                    const preguntaBtn = item.querySelector('button.accordion-button');
+                    const textoPregunta = preguntaBtn.textContent.toLowerCase();
+                    const respuestaDiv = item.querySelector('.accordion-body').textContent.toLowerCase();
 
-    inputBuscar.addEventListener('input', () => {
-      const filtro = inputBuscar.value.toLowerCase();
+                    if (textoPregunta.includes(filtro) || respuestaDiv.includes(filtro)) {
+                        item.style.display = '';
+                        categoriaVisible = true;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
 
-      // Obtener todas las preguntas y categorías
-      const categorias = faqSection.querySelectorAll('.faq-category');
-
-      categorias.forEach(categoria => {
-        let categoriaVisible = false;
-
-        const items = categoria.querySelectorAll('.accordion-item');
-
-        items.forEach(item => {
-          const preguntaBtn = item.querySelector('button.accordion-button');
-          const textoPregunta = preguntaBtn.textContent.toLowerCase();
-          const respuestaDiv = item.querySelector('.accordion-body').textContent.toLowerCase();
-
-          if (textoPregunta.includes(filtro) || respuestaDiv.includes(filtro)) {
-            item.style.display = '';
-            categoriaVisible = true;
-          } else {
-            item.style.display = 'none';
-          }
+                // Mostrar u ocultar categoría según si tiene items visibles
+                if (categoriaVisible) {
+                    categoria.style.display = '';
+                } else {
+                    categoria.style.display = 'none';
+                }
+            });
         });
-
-        // Mostrar u ocultar categoría según si tiene items visibles
-        if (categoriaVisible) {
-          categoria.style.display = '';
-        } else {
-          categoria.style.display = 'none';
-        }
-      });
-    });
-  </script>
+    </script>
 </body>
 
 </html>

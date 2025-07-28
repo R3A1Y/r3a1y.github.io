@@ -37,23 +37,42 @@
         .form-check-input[type="radio"] {
             cursor: pointer;
         }
+
+        .hero {
+            background-color: #f1f5ff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-weight: 700;
+        }
+
+        .hero span.text-primary {
+            color: #2563EB !important;
+        }
+
+        .badge-custom {
+            background-color: #e0d3f5;
+            color: #6b21a8;
+            font-size: 0.75rem;
+        }
     </style>
 </head>
 
 <body>
 
     <!-- Navbar heredado -->
-    <!-- Aquí va el mismo navbar del index.html -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="http://www.w3.org/2000/svg">Divorcios Online</a>
+            <a class="navbar-brand fw-bold text-primary" href="index.html">Divorcios Online</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="calculadora.html">Calculadora</a></li>
                     <li class="nav-item"><a class="nav-link" href="citas.html">Citas</a></li>
                     <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
@@ -66,17 +85,20 @@
             </div>
         </div>
     </nav>
-    <br>
-    <br>
+
+
+    <section class="hero mt-5 pt-5">
+        <div class="container">
+            <span class="badge badge-custom mb-3">Calculadora de costos</span>
+            <h1>Calcula el Costo de </h1>
+            <h1><span class="text-primary">Tu Divorcio</span></h1>
+            <p class="text-muted">Obtén una estimación precisa y personalizada del costo de tu proceso de divorcio <br>
+                basada en tu situación específica.</p>
+        </div>
+    </section>
 
     <div class="container py-5">
-        <h1 class="section-title text-center mb-3">Calcula el Costos de</h1>
-        <h1 class="section-title text-center mb-3" style="color: #2563EB;">Tu Divorcio</h1>
-        <p class="text-center subtext mb-5">Obtén una estimación precisa y personalizada del costo de tu proceso de
-            divorcio basada en tu situación específica.</p>
-        <br>
-        <br>
-        <br>
+
 
 
         <div class="row">
@@ -121,7 +143,7 @@
                             <input class="form-check-input" type="checkbox" value="6040" id="bienes">
                             <label class="form-check-label" for="bienes">
                                 <b>¿Tienen bienes compartidos? (+$99.99) </b>
-                                <p>+ 25% del total de los vienes compatidos</p>
+                                <p>+ 25% del total de los bienes compatidos</p>
                             </label>
                         </div>
                         <br>
@@ -193,14 +215,15 @@
                 <div class="col-md-4 mb-4">
                     <h5 class="fw-bold mb-3">Divorcios Online</h5>
                     <p>Especialistas en divorcios rápidos, seguros y completamente en línea. Atención personalizada y
-                        asesoría legal confiable.</p>
+                        asesoría
+                        legal confiable.</p>
                 </div>
 
                 <div class="col-md-4 mb-4">
                     <h5 class="fw-bold mb-3">Enlaces Útiles</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#servicios" class="text-white text-decoration-none">Nuestros Servicios</a></li>
-                        <li><a href="#proceso" class="text-white text-decoration-none">Proceso</a></li>
+                        <li><a href="index.html#servicios" class="text-white text-decoration-none">Nuestros Servicios</a></li>
+                        <li><a href="index.html#proceso" class="text-white text-decoration-none">Proceso</a></li>
                         <li><a href="calculadora.html" class="text-white text-decoration-none">Calculadora</a></li>
                         <li><a href="citas.html" class="text-white text-decoration-none">Citas</a></li>
                         <li><a href="faq.html" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
@@ -229,6 +252,7 @@
     </footer>
 
     <script>
+
         function calcularCosto() {
             const tasaCambio = 60; // 1 USD = 60 DOP
 

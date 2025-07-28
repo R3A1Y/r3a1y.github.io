@@ -30,7 +30,8 @@ body {
 .hero {
   background: url('../assets/img/hero.jpg') no-repeat center center/cover;
   min-height: 100vh;
-  padding-top: 80px; /* para que no tape el navbar fijo */
+  padding-top: 80px;
+  /* para que no tape el navbar fijo */
 }
 
 .hero h1 {
@@ -45,6 +46,7 @@ body {
   .hero h1 {
     font-size: 2rem;
   }
+
   .hero p {
     font-size: 1rem;
   }
@@ -70,7 +72,8 @@ body {
   font-size: 1.25rem;
 }
 
-.footer p, .footer a {
+.footer p,
+.footer a {
   font-size: 0.95rem;
 }
 
