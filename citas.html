@@ -91,7 +91,7 @@
 
     <section class="hero mt-5 pt-5">
         <div class="container">
-            <span class="badge badge-custom mb-3">Sistema de Cistas Online</span>
+            <span class="badge badge-custom mb-3">Sistema de Citas Online</span>
             <h1>Agenda tu Consulta</h1>
             <h1><span class="text-primary">Gratuita Ahora</span></h1>
             <p class="text-muted">Selecciona el día y hora que mejor te convenga para hablar con uno de nuestros <br>
@@ -103,7 +103,7 @@
 
 
         <div class="calendar-card card shadow-sm p-4">
-            <div class="step-indicator text-center text-primary">Paso 1 de 4: Selecciona el día</div>
+            <h3 class="step-indicator text-center text-primary">Paso 1 de 4: Selecciona el día</h3>
             <h4 class="text-center mb-4">Calendario de Disponibilidad</h4>
 
             <label for="fecha-cita" class="form-label">Selecciona el día que mejor se adapte a tu horario:</label>
@@ -163,39 +163,37 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
-        // Configuramos Flatpickr
-        const inputFecha = document.getElementById('fecha-cita');
-        const btnSiguiente = document.getElementById('siguiente-btn');
+       document.addEventListener("DOMContentLoaded", () => {
+    const inputFecha = document.getElementById('fecha-cita');
+    const btnSiguiente = document.getElementById('siguiente-btn');
 
-        const hoy = new Date();
-        const maxFecha = new Date();
-        maxFecha.setDate(hoy.getDate() + 13); // Muestra 14 días incluyendo hoy
+    const hoy = new Date();
+    const maxFecha = new Date();
+    maxFecha.setDate(hoy.getDate() + 13); // Próximos 14 días contando hoy
 
-        flatpickr(inputFecha, {
-            dateFormat: "Y-m-d",
-            minDate: hoy,
-            maxDate: maxFecha,
-            disable: [
-                function (date) {
-                    // Desactiva sábados (6) y domingos (0)
-                    return (date.getDay() === 0 || date.getDay() === 6);
-                }
-            ],
-            onChange: function (selectedDates, dateStr, instance) {
-                if (selectedDates.length > 0) {
-                    btnSiguiente.disabled = false;
-                }
+    flatpickr(inputFecha, {
+        dateFormat: "Y-m-d",
+        minDate: hoy,
+        maxDate: maxFecha,
+        disable: [
+            function (date) {
+                return (date.getDay() === 0 || date.getDay() === 6); // domingos y sábados
             }
-        });
+        ],
+        onChange: function (selectedDates, dateStr) {
+            btnSiguiente.disabled = selectedDates.length === 0;
+        }
+    });
 
-        // Al hacer clic en siguiente
-        btnSiguiente.addEventListener('click', function () {
-            const fechaSeleccionada = inputFecha.value;
-            if (fechaSeleccionada) {
-                localStorage.setItem("fechaSeleccionada", fechaSeleccionada); // guardamos la fecha
-                window.location.href = "horas.html"; // redirigimos al paso 2
-            }
-        });
+    btnSiguiente.addEventListener('click', () => {
+        const fechaSeleccionada = inputFecha.value;
+        if (fechaSeleccionada) {
+            localStorage.setItem("fechaSeleccionada", fechaSeleccionada);
+            window.location.href = "horas.html";
+        }
+    });
+});
+
     </script>
 
 </body>
