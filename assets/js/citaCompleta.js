@@ -1,3 +1,4 @@
+// Cargar los datos almacenados
 document.getElementById("fechaCita").innerText = localStorage.getItem("fechaSeleccionada") || "No seleccionada";
 document.getElementById("horaCita").innerText = localStorage.getItem("horaSeleccionada") || "No seleccionada";
 document.getElementById("tipoConsulta").innerText = localStorage.getItem("tipoConsulta") || "No especificada";

@@ -70,4 +70,3 @@ ocument.getElementById("calcularBtn").addEventListener("click", function () {
     const confirmacion = document.getElementById("confirmacion");
     confirmacion.style.display = "block";
 });
-
