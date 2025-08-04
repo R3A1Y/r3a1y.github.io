@@ -1,0 +1,50 @@
+.hero {
+    background-color: #f1f5ff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-weight: 700;
+}
+
+.hero span.text-primary {
+    color: #2563EB !important;
+}
+
+.badge-custom {
+    background-color: #e0d3f5;
+    color: #6b21a8;
+    font-size: 0.75rem;
+}
+
+.step-indicator {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2563EB;
+}
+
+.resumen-cita {
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgb(37 99 235 / 0.3);
+}
+
+.resumen-cita h5 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #2563EB;
+}
+
+.resumen-item {
+    margin-bottom: 8px;
+}
+
+.importante {
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #7c3aed;
+}

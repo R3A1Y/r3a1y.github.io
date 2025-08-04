@@ -1,0 +1,59 @@
+.hero {
+    background-color: #f1f5ff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-weight: 700;
+}
+
+.hero span.text-primary {
+    color: #2563EB !important;
+}
+
+.badge-custom {
+    background-color: #e0d3f5;
+    color: #6b21a8;
+    font-size: 0.75rem;
+}
+
+.titulo-principal {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    line-height: 1.2;
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.resumen-puntos {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.punto {
+    text-align: center;
+    font-weight: 600;
+    color: #374151;
+}
+
+.testimonio-card {
+    background-color: #f9fafb;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.estrellas {
+    color: #facc15;
+}

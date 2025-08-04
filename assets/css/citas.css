@@ -1,0 +1,53 @@
+.hero {
+    background-color: #f1f5ff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-weight: 700;
+}
+
+.hero span.text-primary {
+    color: #2563EB !important;
+}
+
+.badge-custom {
+    background-color: #e0d3f5;
+    color: #6b21a8;
+    font-size: 0.75rem;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.step-indicator {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.calendar-card {
+    max-width: 500px;
+    margin: auto;
+}
+
+.hero {
+    background-color: #f1f5ff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-weight: 700;
+}
+
+.hero span.text-primary {
+    color: #2563EB !important;
+}
+
+.badge-custom {
+    background-color: #e0d3f5;
+    color: #6b21a8;
+    font-size: 0.75rem;
+}

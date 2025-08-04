@@ -1,0 +1,94 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Hero */
+.hero {
+    background-color: #f1f5ff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-weight: 700;
+}
+
+.hero span.text-primary {
+    color: #2563EB !important;
+}
+
+.badge-custom {
+    background-color: #e0d3f5;
+    color: #6b21a8;
+    font-size: 0.75rem;
+}
+
+/* Sección preguntas */
+.faq-section {
+    max-width: 900px;
+    margin: 3rem auto 5rem;
+    padding: 0 1rem;
+}
+
+.faq-category {
+    margin-bottom: 2rem;
+}
+
+.faq-category h3 {
+    color: #2563EB;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Bloques destacados */
+.highlights {
+    background-color: white;
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(37 99 235 / 0.15);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.highlight-item {
+    text-align: center;
+    flex: 1 1 250px;
+}
+
+.highlight-item i {
+    font-size: 2.5rem;
+    color: #2563EB;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-item p {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0;
+    color: #444;
+}
+
+/* Botones al pie */
+.faq-footer-buttons {
+    text-align: center;
+    margin-bottom: 4rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.faq-footer-buttons a {
+    min-width: 180px;
+}
+
+/* Buscador */
+#searchFaq {
+    max-width: 400px;
+    margin: 0 auto 3rem;
+}

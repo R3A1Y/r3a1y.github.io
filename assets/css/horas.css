@@ -1,0 +1,35 @@
+.hero {
+    background-color: #f1f5ff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-weight: 700;
+}
+
+.hero span.text-primary {
+    color: #2563EB !important;
+}
+
+.badge-custom {
+    background-color: #e0d3f5;
+    color: #6b21a8;
+    font-size: 0.75rem;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.hora-card {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+    user-select: none;
+}
+
+.hora-card.selected {
+    border-color: #2563eb;
+    background-color: #eaf4ff;
+}

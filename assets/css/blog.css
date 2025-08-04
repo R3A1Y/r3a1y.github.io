@@ -1,0 +1,54 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.hero {
+    background-color: #f1f5ff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-weight: 700;
+}
+
+.hero span.text-primary {
+    color: #2563EB !important;
+}
+
+.badge-custom {
+    background-color: #e0d3f5;
+    color: #6b21a8;
+    font-size: 0.75rem;
+}
+
+.blog-card {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-footer {
+    background: #0f172a;
+    color: #fff;
+    padding: 3rem 0;
+}
+
+.blog-footer h5 {
+    font-weight: bold;
+}
+
+.blog-footer a {
+    color: #cbd5e1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.tag {
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+}
