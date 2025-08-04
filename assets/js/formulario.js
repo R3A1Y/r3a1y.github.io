@@ -31,10 +31,11 @@ document.getElementById("formCita").addEventListener("submit", async function (e
     e.preventDefault();
 
     const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
 
     // Validar el formulario usando validación nativa HTML5
     if (!form.checkValidity()) {
-        form.classList.add('was-validated'); // Para mostrar mensajes de invalid-feedback si usas Bootstrap
+        form.classList.add('was-validated');
         alert("Por favor completa todos los campos obligatorios correctamente.");
         return;
     }
@@ -66,6 +67,10 @@ document.getElementById("formCita").addEventListener("submit", async function (e
         hora,
     };
 
+    // Desactivar el botón mientras se envía
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Enviando...";
+
     try {
         const res = await fetch("http://localhost:5000/api/cita", {
             method: "POST",
@@ -74,17 +79,24 @@ document.getElementById("formCita").addEventListener("submit", async function (e
         });
 
         if (res.ok) {
-            // Guarda correo para uso futuro si quieres
             localStorage.setItem("correoUsuario", correo);
+            // Mantiene el botón desactivado por 1 minuto incluso después de redirigir
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Enviar Cita";
+            }, 60000);
 
-            // Redirige solo si el envío fue exitoso
             window.location.href = "citaCompleta.html";
         } else {
             const errorData = await res.json();
             alert("Error al enviar la cita: " + (errorData.message || "Error desconocido"));
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Enviar Cita";
         }
     } catch (error) {
         console.error(error);
         alert("Error al enviar la cita, intenta de nuevo más tarde.");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Enviar Cita";
     }
 });
