@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/consulta", {
+      const res = await fetch("https://divorcios-backend.onrender.com/api/consulta", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
